@@ -12,9 +12,17 @@ public class Problem2 {
         /*
           Rational class를 참고하여 코드 작성
         */
-      
+        long numerator1 = (long)-b;
+        long denominator1 = (long)2*a;
+        Rational h = new Rational(numerator1,denominator1);// 큰 해
+
+        long numerator2 = (long) (-Math.pow(b,2)+4*a*c);
+        long denominator2 = (long)4*a;
+        Rational k = new Rational(numerator2,denominator2); // 작은 해
+
+        System.out.println("h is " + h.toString() + " " + "k is " + k.toString());
     }
-  
+
     static class Rational extends Number implements Comparable<Rational> {
         // Data fields for numerator and denominator
         private long[] r = new long[2];
